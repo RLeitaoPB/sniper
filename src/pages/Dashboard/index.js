@@ -1,7 +1,16 @@
+import { useContext } from "react"
+import { AuthContext } from "../../contexts/auth"
+
+import Header from '../../components/Header'
+
 export default function Dashboard(){
+    const { signOut } = useContext(AuthContext);
+    
+    
     return(
         <div>
-            <h1> Página de dashboard</h1>
+            <Header/>
+            <button onClick={ ()=> signOut() }> Sair da conta</button>
         </div>
     ) 
 }

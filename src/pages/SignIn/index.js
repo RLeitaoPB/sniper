@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/auth';
 import './signin.css';
 import logo from '../../assets/Sniper-logo-rev.png';
 
@@ -7,9 +8,14 @@ function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const { signIn, loadingAuth } = useContext(AuthContext);
+
   function handleSubmit(e){
     e.preventDefault();
-    alert("Clicou")
+
+    if(email !=='' && password !==''){
+      signIn(email, password);
+    }
   }
 
     return (
@@ -21,9 +27,9 @@ function SignIn() {
 
           <form onSubmit={handleSubmit}>
             <h1>Entrar</h1>
-            <input className="email" type="text" placeholder="email@email.com" autofocus="true" value={ email } onChange={ (e) => setEmail(e.target.value) }/>
+            <input className="email" type="text" placeholder="email@email.com" autoFocus={true} value={ email } onChange={ (e) => setEmail(e.target.value) }/>
             <input className="senha"type="password" placeholder="senha" value={ password } onChange={ (e) => setPassword(e.target.value) }/>
-            <button className="botao"type="submit">Acessar</button>
+            <button className="botao"type="submit">{loadingAuth ? 'Carregando...' : 'Acessar'}</button>
           </form>
 
           <Link to="/register">Criar uma conta</Link>
