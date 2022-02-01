@@ -3,15 +3,15 @@
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #181C2e;
+  background-color: #131F2Fff;;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .sidebar div{
-  background: url('../../assets/cover.png');
-  background-color: #181C2e;
+  background: url('../../assets/estante.jpg');
+  background-color: #131F2Fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

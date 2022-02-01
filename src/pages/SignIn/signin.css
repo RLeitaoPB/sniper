@@ -19,7 +19,7 @@
 .login-area{
     display: flex;
     justify-content: center;
-    background-color: #40BBBF;
+    background-color: #40BBBFff;
     width: 100%;
 }
 
@@ -39,7 +39,7 @@ form{
 form h1{
     text-align: center;
     margin-bottom: 0.5em;
-    color: #181c2e;
+    color: #131F2Fff;
 }
 
 login input{
@@ -74,5 +74,5 @@ form button{
 }
 
 .botao:hover{
-    background-color:#4ee0e6;
+    background-color:#40BBBFff;
 }

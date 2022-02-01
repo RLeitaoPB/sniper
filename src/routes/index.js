@@ -7,6 +7,8 @@ import SignUp from '../pages/SignUp';
 
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
+import Tutorial from '../pages/Tutorial';
+import News from '../pages/News';
 
 export default function Routes(){
   return(
@@ -16,7 +18,8 @@ export default function Routes(){
 
       <Route exact path="/dashboard" component={Dashboard} isPrivate />
       <Route exact path="/profile" component={Profile} isPrivate />
-
+      <Route exact path="/tutorial" component={Tutorial} isPrivate />
+      <Route exact path="/news" component={News} isPrivate />
     </Switch>
   )
 }
